@@ -1,6 +1,5 @@
 import example from './example_img.jpg';
 import Image from "next/image"
-import Link from "next/link";
 export default function Page(){
   return <div className="container">
   <h1 className="head">Project name</h1>
@@ -20,18 +19,6 @@ export default function Page(){
     <div className="image-container">
       <Image className="image" src={example} alt=""/>
     </div>
-    
-    <ul className="linksprj">
-  
-  <li className="linkprj">
-    <Link href={"#"}>LinkedIn</Link>
-  </li>
-  <li className="linkprj"><Link href={"#"}>Github</Link></li>
-  <li className="linkprj"><Link href={"#"}>Facebook</Link></li>
-</ul>
-    
   </div>
   </div>
-
-  
 }

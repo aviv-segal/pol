@@ -24,7 +24,10 @@ export default function RootLayout({
     set_right_menu(false);
     set_opcacity(0);
     await timeout(transition);
-    router.push(location);
+    router.replace(location);
+    //@ts-expect-error
+    router.push(location, undefined, { shallow: true });
+    if (pathname == location){set_opcacity(1);}
   }
   return (
     <html lang="en">
@@ -35,11 +38,12 @@ export default function RootLayout({
             onClick={() => set_left_menu(!left_menu)}
             onMouseEnter={() => set_left_menu(true)}
             >First year<br />⌄</button>
-              <ul className="dropdown" style={{transform: left_menu ? "translate(0, 0)" : "translate(0, -50vh)"}}>
-              <li className="option" onClick={async () => SwitchPage('/projects/first_year/fall')}>fall</li>
-              <li className="option" onClick={async () => SwitchPage('/projects/first_year/winter')}>winter</li>
-              <li className="option" onClick={async () => SwitchPage('/projects/first_year/spring')}>spring</li>
-              <li className="option" onClick={async () => SwitchPage('/projects/first_year/summer')}>summer</li>
+              <ul className="dropdown" style={{display: left_menu ? "inherit" : "none"}}>
+              <li className="option" onClick={async () => SwitchPage('/projects/first_year/fall')}>Mini Project</li>
+              <li className="option" onClick={async () => SwitchPage('/projects/first_year/autumn')}>Autumn Project</li>
+              <li className="option" onClick={async () => SwitchPage('/projects/first_year/winter')}>Winter Project</li>
+              <li className="option" onClick={async () => SwitchPage('/projects/first_year/spring')}>Spring Project</li>
+              <li className="option" onClick={async () => SwitchPage('/projects/first_year/summer')}>Summer Project</li>
             </ul>
           </div>
           <div className="middle page">
@@ -50,11 +54,12 @@ export default function RootLayout({
               onMouseEnter={() => set_right_menu(true)}
               onClick={() => set_right_menu(!right_menu)}
               >Second year<br />⌄</button>
-              <ul className="dropdown" style={{transform: right_menu ? "translate(0, 0)" : "translate(0, -50vh)"}}>
-              <li className="option" onClick={async () => SwitchPage('/projects/second_year/fall')}>fall</li>
-              <li className="option" onClick={async () => SwitchPage('/projects/second_year/winter')}>winter</li>
-              <li className="option" onClick={async () => SwitchPage('/projects/second_year/spring')}>spring</li>
-              <li className="option" onClick={async () => SwitchPage('/projects/second_year/summer')}>summer</li>
+              <ul className="dropdown" style={{display: right_menu ? "inherit" : "none"}}>
+              <li className="option" onClick={async () => SwitchPage('/projects/second_year/fall')}>Mini Project</li>
+              <li className="option" onClick={async () => SwitchPage('/projects/second_year/winter')}>Winter Project</li>
+              <li className="option" onClick={async () => SwitchPage('/projects/second_year/autumn')}>autumn Project</li>
+              <li className="option" onClick={async () => SwitchPage('/projects/second_year/spring')}>Spring Project</li>
+              <li className="option" onClick={async () => SwitchPage('/projects/second_year/summer')}>Summer Project</li>
               </ul>
             </div>
         </nav>
