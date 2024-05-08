@@ -33,7 +33,6 @@ export default function Home() {
         <h2 className="frame-1">cyber security</h2>
         <h2 className="frame-2">game dev</h2>
         <h2 className="frame-3">software engineering</h2>
-        <h2 className="frame-4">Talent #4</h2>
         <h2 className="frame-5">
 
           

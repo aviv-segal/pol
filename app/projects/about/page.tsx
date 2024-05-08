@@ -9,6 +9,8 @@ export default function socials(){
     <div className="aboutme">
      <h1 className="Whoami">Who am i?</h1>
     <p className="description">
+        Hi my name is Aviv and my hobbys are playing video games, coding
+        and video games are one of the reasons I wanted to study computer science.
         Information about your personal life, hobbys, talents, etc...
         Information about your personal life, hobbys, talents, etc...
         Information about your personal life, hobbys, talents, etc...
@@ -27,8 +29,9 @@ export default function socials(){
     <div className="CV">
       <h1 className="CV-head">CV</h1>
       <p className="CV-text">
-         Please fill here information about your studies in this school, achivements, goals, passions, work abilities. 
-        Please fill here information about your studies in this school, achivements, goals, passions, work abilities. 
+        My passion is computer science I started computer science last year, and I made projects like video games, applications, websites, and some
+        other things.
+               Please fill here information about your studies in this school, achivements, goals, passions, work abilities. 
         Please fill here information about your studies in this school, achivements, goals, passions, work abilities. 
         Please fill here information about your studies in this school, achivements, goals, passions, work abilities. 
         Please fill here information about your studies in this school, achivements, goals, passions, work abilities. 

@@ -194,8 +194,8 @@ h1, li, p{
 }
 
 .image{
-  height: 15em;
-  width: 15em;
+  height: 30em;
+  width: 30em;
   object-fit: contain;
 }
 
